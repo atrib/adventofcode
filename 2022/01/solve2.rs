@@ -18,8 +18,12 @@ fn main() {
                                                 .map(|nv:Vec<i64>| nv.into_iter().fold(0, |x, y| x + y))
                                                 .collect();
     
-        let max_elf_ration = elfration_ints.iter().max().unwrap();
+        let mut max_elf_ration = elfration_ints.clone();
+        max_elf_ration.sort();
+        max_elf_ration.reverse();
+        max_elf_ration.truncate(3);
+        let total_max3_elf_ration: i64 = max_elf_ration.into_iter().sum();
     
-        println!("Max ration:\n{:?}", max_elf_ration);
+        println!("Max ration:\n{:?}", total_max3_elf_ration);
     }
 }
