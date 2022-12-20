@@ -2,7 +2,7 @@ INPUTS = input1.simple input4.simple
 INPUTS += input
 
 SOLUTIONS = solve1.txt
-# SOLUTIONS += solve2.txt
+SOLUTIONS += solve2.txt
 
 # PRECIOUS targets are intermediate files which are not deleted
 .PRECIOUS: ${SOLUTIONS} $(SOLUTIONS:%.txt=%/target/debug/exe)
